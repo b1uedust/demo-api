@@ -37,7 +37,7 @@ public class DemoApiApplication {
 			// @formatter:off
 	           http
 	           // Just for laughs, apply OAuth protection to only 2 resources
-	           .requestMatchers().antMatchers("/api/**").and()
+	           
 	           .authorizeRequests()
 	           .anyRequest().access("#oauth2.hasScope('openid')"); //[4]
 	           // @formatter:on
